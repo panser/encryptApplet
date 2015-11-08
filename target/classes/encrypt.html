@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Javascript - Java</title>
+</head>
+<body>
+
+    <div>
+        <applet id="encryptApplet" code="EncryptApplet.class" width="1" height="1"></applet>
+    </div>
+
+</body>
+
+<script src="https://www.java.com/js/deployJava.js"></script>
+<script type="text/javascript">
+
+    var str = "надо зашифровать";
+    function reverse(s){
+        return s.split("").reverse().join("");
+    }
+
+    // invoke encrypt() method of the applet and pass variable str as argument:
+    var newStr = encryptApplet.encrypt(str);
+
+    var msg = (str == reverse(newStr)) ? 'соответствует' : 'не соответствует';
+    console.log(msg);
+    alert(msg);
+
+</script>
+
+</html>
